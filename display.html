@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Simple Form">
+    <meta name="author" content="Bhaskararao Gummidi">
+	<title>Your details</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css">	
+</head>
+<style type="text/css">
+	span
+	{
+		margin-right: 20px;
+		font-size: 20px;
+	}
+	#span1
+	{
+		margin-left: 30px;
+		font-weight: bold;
+	}
+</style>
+<body>
+<form name="disp1">
+	<div class="panel panel-primary">
+			<div class="panel-heading">Your Information</div>
+				<div class="panel-body">
+					<span id="span1">First Name : </span><span id="p1" style="margin-left: 35px;"></span><br>
+					<span id="span1">Last Name : </span><span id="p2" style="margin-left: 35px;"></span><br>
+					<span id="span1">Email : </span><span id="p3" style="margin-left: 85px;"></span><br>
+					<span id="span1">Phone Number : </span><span id="p4"></span><br>
+					<span id="span1">Gender : </span><span id="p5" style="margin-left: 70px;"></span><br>
+					<span id="span1">Country : </span><span id="p6" style="margin-left: 60px;"></span>
+				</div>
+	</div>
+	</form>
+</body>
+<script>
+	var url = new URL(location.href);
+	var a = url.searchParams.get("First name");
+	document.getElementById('p1').innerHTML = a;
+	var b = url.searchParams.get("Last name");
+	document.getElementById('p2').innerHTML = b;
+	var c = url.searchParams.get("email");
+	document.getElementById('p3').innerHTML = c;
+	var d = url.searchParams.get("Phone Number");
+	document.getElementById('p4').innerHTML = d;
+	var e = url.searchParams.get("Male");
+	document.getElementById('p5').innerHTML = e;
+	var f = url.searchParams.get("Country");
+	document.getElementById('p6').innerHTML = f;
+</script>
+</html>

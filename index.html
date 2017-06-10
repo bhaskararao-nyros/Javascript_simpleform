@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Simple Form">
+    <meta name="author" content="Bhaskararao Gummidi">
+	<title>Simple Form</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+<body>
+	<form name="myform" action="display.html" method="GET">
+		<div class="panel panel-primary">
+			<div class="panel-heading">Submit your details here</div>
+				<div class="panel-body">
+				
+					<label id="labl">First Name</label><span id="fnerror" class="error"></span>
+					<span>
+					<input type="text" name="First name" placeholder="First Name" id="fname" class="form-control">
+					</span><br>
+
+					<label id="labl">Last Name</label><span id="lnerror" class="error"></span>
+					<span>
+					<input type="text" name="Last name" placeholder="Last Name" id="lname" class="form-control">
+					</span><br>
+
+					<label id="labl">Email</label><span id="emerror" class="error"></span>
+					<span>
+					<input type="email" name="email" placeholder="e.g @gmail.com" id="eml" class="form-control">
+					</span><br>
+
+					<label id="labl">Phone Number</label><span id="pnerror" class="error"></span>
+					<span>
+					<input type="text" name="Phone Number" placeholder="+91 000 111 2222" id="pnum" class="form-control" value="(+91) ">
+					</span><br>
+					
+					<label id="labl">Gender</label>
+					<span id="span1">Male<input type="radio" name="Male" id="mgen" checked="checked" value="Male">
+						  Female<input type="radio" name="Male" id="fgen" value="Female">
+						  <span id="gerror" class="error"></span>
+					</span><br><br>
+					
+					<label id="labl">Country</label>
+					
+
+					<span id="span1"><select id="cntr" name="Country">
+						<option value="0" id="dd">Select</option>
+						<option value="India" id="dd1">India</option>
+						<option value="America" id="dd2">America</option>
+						<option value="England" id="dd3">England</option>
+						<option value="Nepal" id="dd4">Nepal</option>
+					</select></span><span id="cerror" class="error"></span><br><br>
+					<span><input type="checkbox" name="text" id="cbox">Agreed to privacy policy</span><span id="cbxerror" class="error"></span><br><br>
+
+					<center><button class="btn btn-success" onclick="return validateAll()">Submit</button></center>
+
+				</div>
+		</div>
+	</form>
+</body>
+<script src="./assets/js/validation.js"></script>
+</html>
