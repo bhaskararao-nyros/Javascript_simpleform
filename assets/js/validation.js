@@ -11,6 +11,7 @@ function validateAll()
 	var pnmreg 	= new RegExp(/\(\+[0-9]{2}\)\s[0-9]{3}[\s][0-9]{3}[\s][0-9]{4}/gm);
 	var genM = document.getElementById("mgen");
 	var genF = document.getElementById("fgen");
+	var gen = document.querySelector('input[name="Male"]:checked').value;
 	var cnt = document.getElementById("cntr");
 	var strCnt = cnt.options[cnt.selectedIndex].value;
 	var cbx = document.getElementById("cbox");
@@ -120,5 +121,11 @@ function validateAll()
 		// document.getElementById("fname").focus();
 		return false;
 	}
-	alert("Your details submitted successfully\nPress Ok to see your information");
+	alert("first name :" + fnm +
+		   "\nlast name : "+ lnm +
+		   "\nemail :" + em +
+		   "\nphone number :" + pnm +
+		   "\nGender :" + gen +
+		   "\ncountry :" + strCnt +
+		   "\npolicy :" + cbx.checked);
 };
